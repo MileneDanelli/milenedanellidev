@@ -3,25 +3,25 @@ zerops:
     build:
       base: nodejs@22
       buildCommands:
-        - yarn install --frozen-lockfile
-        - yarn build
+        - npm install --frozen-lockfile
+        - npm run build
       deployFiles:
         - .next
         - public
         - package.json
-        - yarn.lock
+        - package-lock.json
         - next.config.ts
       cache:
         - node_modules
-        - yarn.lock
+        - package-lock.json
     run:
       base: nodejs@22
       envVariables:
         NODE_ENV: production
         PORT: "3000"
       initCommands:
-        - yarn install --frozen-lockfile --production=false
-      start: yarn start
+        - npm install --frozen-lockfile --production=false
+      start: npm start
       ports:
         - port: 3000
           httpSupport: true
