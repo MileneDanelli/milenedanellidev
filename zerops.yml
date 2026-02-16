@@ -1,0 +1,27 @@
+zerops:
+  - setup: nextjs
+    build:
+      base: nodejs@22
+      buildCommands:
+        - yarn install --frozen-lockfile
+        - yarn build
+      deployFiles:
+        - .next
+        - public
+        - package.json
+        - yarn.lock
+        - next.config.ts
+      cache:
+        - node_modules
+        - yarn.lock
+    run:
+      base: nodejs@22
+      envVariables:
+        NODE_ENV: production
+        PORT: "3000"
+      initCommands:
+        - yarn install --frozen-lockfile --production=false
+      start: yarn start
+      ports:
+        - port: 3000
+          httpSupport: true
