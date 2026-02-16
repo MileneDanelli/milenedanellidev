@@ -13,16 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Milene Danelli | Desenvolvedora Full Stack",
+  title: "Milene Danelli | Full Stack Developer",
   description:
-    "Portfólio de Milene Danelli, desenvolvedora full stack com experiência em Laravel, React, APIs e soluções web escaláveis.",
+    "Milene Danelli's portfolio, a full stack developer with experience in Laravel, React, APIs, and scalable web solutions.",
   keywords: [
     "Milene Danelli",
-    "Desenvolvedora Full Stack",
+    "Full Stack Developer",
     "Laravel",
     "React",
     "PHP",
-    "Portfólio",
+    "Portfolio",
   ],
 };
 
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
