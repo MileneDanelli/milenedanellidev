@@ -3,7 +3,7 @@ zerops:
     build:
       base: nodejs@22
       buildCommands:
-        - npm install --frozen-lockfile
+        - npm install
         - npm run build
       deployFiles:
         - .next
@@ -20,7 +20,7 @@ zerops:
         NODE_ENV: production
         PORT: "3000"
       initCommands:
-        - npm install --frozen-lockfile --production=false
+        - npm install
       start: npm start
       ports:
         - port: 3000
